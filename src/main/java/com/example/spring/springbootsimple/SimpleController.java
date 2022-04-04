@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SimpleController {
 
-    @GetMapping("/count")
+    @GetMapping("/")
     public ResponseEntity<String> getCount() {
         Counter.inc();
         return ResponseEntity.ok("{\"counter\":\"" + Counter.count + "\"}");
